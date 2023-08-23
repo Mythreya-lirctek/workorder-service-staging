@@ -1,0 +1,42 @@
+version: 0.2
+
+env:
+  variables:
+    SRC_CODE: ""
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - n 16.13.2
+  pre_build:
+    commands:
+      - echo pre-build phase
+      - chmod -R +x scripts 
+  build:
+    commands:
+      - echo build phase
+      - echo "node version:" node -v
+      - echo "npm version:" npm -v
+#      - npm install path
+      - npm install
+      - npm run test
+      - npm run tslint
+      - npm run build
+      
+
+  post_build:
+    commands:
+      - echo post-build phase
+      - echo Build completed on `date`
+      - ls -al
+#      - echo Artifacts copied to S3
+
+artifacts:
+  files:
+    - '**/*'
+  name: workorder-service
+  discard-paths: no
+#  exclude-paths:
+#    - "**/.*/**/*"

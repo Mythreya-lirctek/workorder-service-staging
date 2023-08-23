@@ -1,0 +1,40 @@
+{
+	"extends": [
+		"tslint:latest",
+		"tslint-config-prettier",
+		"tslint-no-commented-code-rule"
+	],
+	"rules": {
+		"class-name": true,
+		"ordered-imports": false,
+		"interface-name": [true, "never-prefix"],
+		"no-implicit-dependencies": [true, "dev"],
+		"typedef": [true, "call-signature", "parameter", "member-variable-declaration"],
+		"quotemark": [true, "single", "avoid-escape"],
+		"file-name-casing": [true, "snake-case"],
+		"no-consecutive-blank-lines": [true, 2],
+		"variable-name": {
+			"options": [
+				"ban-keywords",
+				"check-format",
+				"allow-leading-underscore",
+				"require-const-for-all-caps"
+			]
+		},
+		"curly": true,
+		"import-spacing": true,
+		"jsdoc-format": true,
+		"indent": [true, "tabs", 4],
+		"max-line-length": [true, 140],
+		"prefer-template": [true],
+		"cyclomatic-complexity": [true, 75],
+		"no-loop-func": false,
+		"prefer-for-of": false,
+		"no-commented-code": [true, {
+			// ignore any comments that have less than N lines
+			"minLineCount": 0,
+			// ignore all lines that match this regex
+			"ignoredCommentRegex": "^(\\w+$|TODO|FIXME)"
+		}]
+	}
+}

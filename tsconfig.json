@@ -1,0 +1,30 @@
+{
+	"files": [
+		"server.ts",
+		"app.ts"
+	],
+	"include": [
+		"src/**/*.ts"
+	],
+	"compilerOptions": {
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"target": "es6",
+		"watch": false,
+		"outDir": "dist",
+		"rootDir": ".",
+		"sourceMap": true,
+		"baseUrl": ".",
+		"moduleResolution": "node",
+		"removeComments": true,
+		"experimentalDecorators": true,
+		"noUnusedParameters": true,
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"paths": {
+			"*": ["@types/*"]
+		},
+		"esModuleInterop": true
+	}
+}
