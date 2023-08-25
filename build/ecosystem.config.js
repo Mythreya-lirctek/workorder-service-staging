@@ -39,7 +39,7 @@ module.exports = {
 				NODE_ENV: 'staging',
 				PORT: 4013,
 				GATEWAY_URL: "https://staging-api-service.taraiwa.com",
-				CONFIG_USERNAME: "prime-staging",
+				CONFIG_USERNAME: "prime-dev",
 				CONFIG_PASSWORD: "u=7zdMcukBzwHdF-",
 				NYLAS_USER_REDIRECT_URI: "https://sandbox.taraiwa.com/#/users/profile",
 				NYLAS_COMPANY_REDIRECT_URI: "https://sandbox.taraiwa.com/#/company/integration/email",
